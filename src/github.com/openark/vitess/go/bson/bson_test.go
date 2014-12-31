@@ -10,7 +10,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/youtube/vitess/go/bytes2"
+	"github.com/openark/vitess/go/bytes2"
 )
 
 type alltypes struct {
