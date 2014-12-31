@@ -11,7 +11,7 @@ import (
 	"testing"
 	"time"
 
-	"go/bytes2"
+	"github.com/openark/vitess/go/bytes2"
 )
 
 const (

@@ -7,7 +7,7 @@ package sqlparser
 import (
 	"testing"
 
-	"go/sqltypes"
+	"github.com/openark/vitess/go/sqltypes"
 )
 
 func TestParsedQuery(t *testing.T) {

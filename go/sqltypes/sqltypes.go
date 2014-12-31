@@ -14,9 +14,9 @@ import (
 	"strconv"
 	"time"
 
-	"go/bson"
-	"go/bytes2"
-	"go/hack"
+	"github.com/openark/vitess/go/bson"
+	"github.com/openark/vitess/go/bytes2"
+	"github.com/openark/vitess/go/hack"
 )
 
 var (

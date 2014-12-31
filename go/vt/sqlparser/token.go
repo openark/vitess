@@ -9,7 +9,7 @@ import (
 	"fmt"
 	"strings"
 
-	"go/sqltypes"
+	"github.com/openark/vitess/go/sqltypes"
 )
 
 const EOFCHAR = 0x100

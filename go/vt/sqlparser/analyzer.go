@@ -9,7 +9,7 @@ package sqlparser
 import (
 	"fmt"
 
-	"go/sqltypes"
+	"github.com/openark/vitess/go/sqltypes"
 )
 
 // GetTableName returns the table name from the SimpleTableExpr
