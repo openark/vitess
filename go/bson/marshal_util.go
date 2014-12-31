@@ -9,7 +9,7 @@ package bson
 import (
 	"time"
 
-	"github.com/openark/vitess/go/bytes2"
+	"go/bytes2"
 )
 
 // EncodeInterface bson encodes an interface{}. Elements

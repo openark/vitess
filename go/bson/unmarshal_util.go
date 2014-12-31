@@ -11,7 +11,7 @@ import (
 	"math"
 	"time"
 
-	"github.com/openark/vitess/go/hack"
+	"go/hack"
 )
 
 // VerifyObject verifies kind to make sure it's

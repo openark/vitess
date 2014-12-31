@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/openark/vitess/go/bytes2"
+	"go/bytes2"
 )
 
 type String1 string

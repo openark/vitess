@@ -12,7 +12,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/openark/vitess/go/testfiles"
+	"go/testfiles"
 )
 
 func TestGen(t *testing.T) {

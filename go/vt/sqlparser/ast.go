@@ -9,7 +9,7 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/openark/vitess/go/sqltypes"
+	"go/sqltypes"
 )
 
 // Instructions for creating new types: If a type

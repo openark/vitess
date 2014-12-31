@@ -11,7 +11,7 @@ import (
 	"io"
 	"unicode/utf8"
 
-	"github.com/openark/vitess/go/hack"
+	"go/hack"
 )
 
 // ChunkedWriter has the same interface as bytes.Buffer's write functions.
