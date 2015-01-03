@@ -10,8 +10,8 @@ package mytype
 import (
 	"bytes"
 
-	"github.com/youtube/vitess/go/bson"
-	"github.com/youtube/vitess/go/bytes2"
+	"github.com/openark/vitess/go/bson"
+	"github.com/openark/vitess/go/bytes2"
 )
 
 // MarshalBson bson-encodes MyType.
