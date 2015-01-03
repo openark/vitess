@@ -553,6 +553,14 @@ boolean_expression:
   {
     $$ = &FalseExpr{Operator: AST_IS_NOT_FALSE, Expr: $1}
   }
+| boolean_expression IS NULL
+  {
+    $$ = &NullExpr{Operator: AST_IS_NULL, Expr: $1}
+  }
+| boolean_expression IS NOT NULL
+  {
+    $$ = &NullExpr{Operator: AST_IS_NOT_NULL, Expr: $1}
+  }
 
 condition:
   value_expression compare value_expression
