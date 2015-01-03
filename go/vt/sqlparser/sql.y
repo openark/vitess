@@ -537,6 +537,22 @@ boolean_expression:
   {
     $$ = &ParenBoolExpr{Expr: $2}
   }
+| boolean_expression IS TRUE
+  {
+    $$ = &TrueExpr{Operator: AST_IS_TRUE, Expr: $1}
+  }
+| boolean_expression IS NOT TRUE
+  {
+    $$ = &TrueExpr{Operator: AST_IS_NOT_TRUE, Expr: $1}
+  }
+| boolean_expression IS FALSE
+  {
+    $$ = &FalseExpr{Operator: AST_IS_FALSE, Expr: $1}
+  }
+| boolean_expression IS NOT FALSE
+  {
+    $$ = &FalseExpr{Operator: AST_IS_NOT_FALSE, Expr: $1}
+  }
 
 condition:
   value_expression compare value_expression

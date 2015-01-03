@@ -76,6 +76,10 @@ select /* is true */ 1 from t where a is true
 select /* is not true */ 1 from t where a is not true
 select /* is false */ 1 from t where a is false
 select /* is not false */ 1 from t where a is not false
+select /* is true ev */ 1 from t where (a+2) is true
+select /* is true ex */ 1 from t where (a > 2) is true
+select /* is not false ev */ 1 from t where (a is null) is not false
+select /* is not false ex */ 1 from t where (a+null) is not false
 select /* < */ 1 from t where a < b
 select /* <= */ 1 from t where a <= b
 select /* >= */ 1 from t where a >= b

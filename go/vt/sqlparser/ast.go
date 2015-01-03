@@ -455,6 +455,8 @@ func (*RangeCond) IExpr()      {}
 func (*NullCheck) IExpr()      {}
 func (*TrueCheck) IExpr()      {}
 func (*FalseCheck) IExpr()     {}
+func (*TrueExpr) IExpr()      {}
+func (*FalseExpr) IExpr()     {}
 func (*ExistsExpr) IExpr()     {}
 func (*KeyrangeExpr) IExpr()   {}
 func (StrVal) IExpr()          {}
@@ -487,6 +489,8 @@ func (*RangeCond) IBoolExpr()      {}
 func (*NullCheck) IBoolExpr()      {}
 func (*TrueCheck) IBoolExpr()      {}
 func (*FalseCheck) IBoolExpr()     {}
+func (*TrueExpr) IBoolExpr()      {}
+func (*FalseExpr) IBoolExpr()     {}
 func (*ExistsExpr) IBoolExpr()     {}
 func (*KeyrangeExpr) IBoolExpr()   {}
 
@@ -613,6 +617,28 @@ const (
 )
 
 func (node *FalseCheck) Format(buf *TrackedBuffer) {
+	buf.Myprintf("%v %s", node.Expr, node.Operator)
+}
+
+
+// TrueExpr represents an IS TRUE or an IS NOT TRUE expression.
+type TrueExpr struct {
+	Operator string
+	Expr     BoolExpr
+}
+
+
+func (node *TrueExpr) Format(buf *TrackedBuffer) {
+	buf.Myprintf("%v %s", node.Expr, node.Operator)
+}
+
+// FalseExpr represents an IS FALSE or an IS NOT FALSE expression.
+type FalseExpr struct {
+	Operator string
+	Expr     BoolExpr
+}
+
+func (node *FalseExpr) Format(buf *TrackedBuffer) {
 	buf.Myprintf("%v %s", node.Expr, node.Operator)
 }
 
